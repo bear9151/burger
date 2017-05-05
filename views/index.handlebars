@@ -1,0 +1,65 @@
+<h1>Welcome to BB-Burger</h1>
+
+<h2>Burgers</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#unless this.devoured}}
+            <li>
+                {{this.burger_name}}
+
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden"
+                           name="devoured"
+                           value="{{#if this.devoured}}false{{else}}true{{/if}} ">
+                    <button class="btn btn-primary"  type="submit">{{#if this.devoured}}Eat Again{{else}}Devour{{/if}}</button>
+                </form>
+
+                <form action="/{{this.id}}?_method=DELETE" method="POST">
+                    <button class="btn btn-danger" type="submit">DELETE!</button>
+                </form>
+
+            </li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Burgers Devoured</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#if this.devoured}}
+            <li>
+                {{this.burger_name}}
+
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden"
+                           name="devoured"
+                           value="{{#if this.devoured}}false{{else}}true{{/if}} ">
+                    <button class="btn btn-primary"  type="submit">{{#if this.devoured}}Eat Again{{else}}Devour{{/if}}</button>
+                </form>
+
+                <form action="/{{this.id}}?_method=DELETE" method="POST">
+                    <button class="btn btn-danger" type="submit">DELETE!</button>
+                </form>
+            </li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
+
+    <div class="form-group">
+        <label for="bur">What burger will ya have?</label>
+        <input type="text" id="bur" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="devo">Want to eat it now?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devoured<br>
+        <input type="radio" name="devoured" value="0"> Not Devoured
+    </div>
+
+    <button type="submit">Add Burger</button>
+</form>
