@@ -1,6 +1,6 @@
 # BB-Burger
 
-BB-Burger is an online restaurant that allows you to eat tasty, virtual burgers over and over again. Enjoy the full menu of speciality burgers, or even create your own from the BB-Burger open bar. The only limit is your BB-Hunger! Now, get to devouring.
+#### BB-Burger is an online restaurant that allows you to eat tasty, virtual burgers over and over again. Enjoy the full menu of speciality burgers, or even create your own from the BB-Burger open bar. The only limit is your BB-Hunger! Now, get to devouring.
 
 ### Installation
 1. Clone the GitHub Repository to your local machine.
