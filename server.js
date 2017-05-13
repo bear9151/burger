@@ -2,7 +2,7 @@ var express = require("express"),
     exphbs = require("express-handlebars"),
     methodOverride = require("method-override"),
     bodyParser = require("body-parser"),
-    port = 3000,
+    port = process.env.PORT || 3000,
     app = express();
 
 app.use(express.static(__dirname + "/public"));
