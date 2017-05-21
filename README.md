@@ -12,6 +12,10 @@
   * Run the code in [seeds.sql](https://github.com/bear9151/burger/blob/master/db/seeds.sql) to populate the data.
 4. Use node to run `server.js` to start the application. In your terminal, you will get a connection message if successful.
 
+### Installation
+Alternatively, visit the live deployment link here:
+https://ancient-fortress-24364.herokuapp.com
+
 ### App Instructions
 * Upon loading the App, you'll see a list of available burgers on the **Burgers Menu**.
 * **Devour** a burger by clicking the button, and the burger will go to the **Burgers Eaten** section.
